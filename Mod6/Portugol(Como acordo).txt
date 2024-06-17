@@ -1,0 +1,37 @@
+Var
+   horarioAcordar : inteiro
+Inicio
+	horarioAcordar <- 7
+	//1 passo
+	escreva("Acordo às ", horarioAcordar, " horas.")
+
+	//2 passo
+	escreva("Ouço o alarme e desligo em seguida.")
+
+	//3 passo
+	escreva("Fico deitado na cama por alguns minutos para acordar.")
+
+	//4 passo
+	escreva("Levanto da cama.")
+
+	//5 passo
+	escreva("Coloco o meu chinelo e vou ao banheiro, para fazer a higiene bucal.")
+
+	//6 passo
+	escreva("Desço para o andar de baixo.")
+
+	//7 passo
+	escreva("Preparo meu café.")
+
+	//8 passo
+	escreva("Subo para meu quarto e me visto.")
+
+	//9 passo
+	escreva("Ligo meu computador.")
+
+	//10 passo
+	escreva("Faço o curso da Ebac.")
+FimAlgoritmo
+
+
+
