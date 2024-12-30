@@ -24,6 +24,12 @@ public class App {
             if ("".equals(opcao)) {
                 sair();
             }
+            if (opcao == null) {
+                sair();
+            }
+            if (Integer.parseInt(opcao) == JOptionPane.CLOSED_OPTION) {
+                sair();
+            }
             opcao = JOptionPane.showInputDialog(null,
                     "Opção inválida digite 1 para cadastro, 2 para consulta, 3 para cadastro, 4 para alteração ou 5 para sair",
                     "Green dinner", JOptionPane.INFORMATION_MESSAGE);
@@ -31,6 +37,10 @@ public class App {
 
         while (isOpcaoValida(opcao)) {
             if (isOpcaoSair(opcao)) {
+                sair();
+            } else if (opcao == null) {
+                sair();
+            } else if (Integer.parseInt(opcao) == JOptionPane.CLOSED_OPTION) {
                 sair();
             } else if (isCadastro(opcao)) {
                 String dados = JOptionPane.showInputDialog(null,
