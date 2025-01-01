@@ -6,7 +6,7 @@ public class SemContratosFactory extends Factory {
         if ("A".equals(requestedGrade)) {
             return new Brasilia(100, 4, "azul");
         } else {
-            return null;
+            return new Bugatti(700, 2, "preto");
         }
     }
 

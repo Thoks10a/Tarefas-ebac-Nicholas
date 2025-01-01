@@ -13,8 +13,9 @@ public abstract class Car {
 
     public void startEngine() {
         System.out.println(getClass().getSimpleName());
-        System.out.println("The car has" + NPorts + "engine has been started, and is ready to utilize " + horsePower
-                + " horsepowers.n");
+        System.out.println(
+                "The car has " + NPorts + " do0rs," + " engine has been started, and is ready to utilize " + horsePower
+                        + " horsepowers.n");
     }
 
     public void clean() {
