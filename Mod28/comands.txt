@@ -1,0 +1,78 @@
+create table Cliente (
+	id bigint not null unique,
+	nome varchar(50) not null,
+	cpf bigint not null unique,
+	idade bigint,
+	id_produto bigint,
+	id_venda bigint,
+	constraint idade_check check (idade > 0 and idade < 120),
+	constraint pk_id_cliente primary key (id),
+	constraint fk_id_cliente_produto foreign key (id_produto) references Produto (id),
+	constraint fk_id_cliente_venda foreign key (id_venda) references Venda (id)
+);
+
+create table Produto (
+	id bigint not null unique,
+	nome varchar(50) not null
+);
+-- c = credito d = debito
+create table Venda (
+	id bigint not null unique,
+	pagamento varchar(1) not null constraint pagamento_tipo check (pagamento = 'C' or pagamento = 'D')
+);
+
+insert into Produto values (1,'escudo')
+insert into Produto values (2,'cogumelo')
+insert into Produto values (3,'box')
+insert into Produto values (4,'espada')
+insert into Produto values (5,'drop database')
+
+-- delete from Produto where id = 5
+
+select * from Produto
+
+insert into Venda values (1,'C')
+insert into Venda values (2,'D')
+insert into Venda values (3,'C')
+insert into Venda values (4,'D')
+insert into Venda values (5,'D')
+
+-- delete from Venda where id = 5
+
+select * from Venda
+
+insert into Cliente values (1,'Link',55555555,20,1,1)
+insert into Cliente values (2,'Mario',77777777,21,2,2)
+insert into Cliente values (3,'Crash',88888888,22,3,3)
+insert into Cliente values (4,'Kratos',10000000,20,4,4)
+insert into Cliente (id,nome,cpf,id_produto,id_venda) values (5,'Kratos2',10000001,4,4)
+
+-- delete from Cliente where id = 5
+
+select * from Cliente
+
+select * from Cliente c, Produto p, Venda v where c.id = p.id and c.id = v.id
+
+select c.id,c.nome,c.cpf,c.idade,p.id,p.nome,v.id,v.pagamento from Cliente c, Produto p, Venda v where c.id = p.id and c.id = v.id
+
+select c.id,c.nome,c.cpf,c.idade,p.nome,v.pagamento from Cliente as c inner join Produto as p on c.id = p.id inner join Venda as v on c.id = v.id
+
+select c.id,c.nome,c.cpf,c.idade,p.nome,v.pagamento from Cliente as c inner join Produto as p on c.id = p.id inner join Venda as v on c.id = v.id
+
+-- inner
+
+select * from Cliente as c inner join Produto as p on c.id = p.id inner join Venda as v on c.id = v.id
+
+-- left compara esquerda com direita
+
+select * from Cliente as c left join Produto as p on c.id = p.id
+
+select c.id as cliente_id, c.nome as cliente_nome, p.id as produto_id, p.nome as produto_nome,v.id as venda_id,v.pagamento as venda_pagamento from Cliente as c left join Produto as p on c.id = p.id left join Venda as v on c.id = v.id
+
+-- right
+
+select c.id as cliente_id, c.nome as cliente_nome, p.id as produto_id, p.nome as produto_nome,v.id as venda_id,v.pagamento as venda_pagamento from Cliente as c right join Venda as v on c.id = v.id right join Produto as p on c.id = p.id
+
+select c.id as cliente_id,c.nome as cliente_nome, v.id as venda_id, v.pagamento as venda_pagamentos from Cliente as c right join Venda as v on c.id = v.id
+
+-- se eu deletar o kratos 2 = 5 ele mostrará o valor nulo pois compara direita com a esquerda
