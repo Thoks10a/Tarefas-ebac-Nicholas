@@ -1,0 +1,1 @@
+- 3 entidades (modelar one-to-one many-to-one many-to-many) (carro/marca/acessorio) (relacionamento das 3) (verificar se subio no banco)
