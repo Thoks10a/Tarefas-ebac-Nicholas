@@ -1,0 +1,17 @@
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\domain\Persistente.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\exceptions\MaisDeUmRegistroException.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\dao\IClienteDAO.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\dao\generic\GenericDAO.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\dao\generic\IGenericDAO.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\exceptions\DAOException.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\services\generic\GenericService.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\controller\IndexController.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\exceptions\TableException.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\domain\Cliente.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\controller\ClienteController.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\dao\ClienteDAO.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\exceptions\TipoChaveNaoEncontradaException.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\service\IClienteService.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\services\generic\IGenericService.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\exceptions\TipoElementoNaoConhecidoException.java
+c:\Users\Nicholas\Documents\GitHub\Tarefas-ebac-Nicholas\Mod38\prode\src\main\java\br\com\rpires\service\ClienteService.java
