@@ -1,0 +1,4 @@
+"{\"WFLYCTL0080: Failed services\" => {\"jboss.deployment.unit.\\\"prode-1.0-SNAPSHOT.war\\\".PARSE\" => \"WFLYSRV0153: Failed to process phase PARSE of deployment \\\"prode-1.0-SNAPSHOT.war\\\"
+    Caused by: org.jboss.as.server.deployment.DeploymentUnitProcessingException: WFLYUT0027: Failed to parse XML descriptor \\\"/c:/Users/Nicholas/Documents/GitHub/Tarefas-ebac-Nicholas/Mod38/Dependencies-ALL/wildfly-23.0.2.Final/bin/content/prode-1.0-SNAPSHOT.war/WEB-INF/web.xml\\\" at [4,5]
+    Caused by: com.ctc.wstx.exc.WstxParsingException: Illegal processing instruction target (\\\"xml\\\"); xml (case insensitive) is reserved by the specs.
+ at [row,col {unknown-source}]: [4,5]\"}}"

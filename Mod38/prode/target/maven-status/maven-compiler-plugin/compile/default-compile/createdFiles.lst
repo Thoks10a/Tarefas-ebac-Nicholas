@@ -6,6 +6,7 @@ br\com\rpires\exceptions\TipoChaveNaoEncontradaException.class
 br\com\rpires\services\generic\IGenericService.class
 br\com\rpires\service\ClienteService.class
 br\com\rpires\exceptions\TipoElementoNaoConhecidoException.class
+br\com\rpires\MyCustomFilter.class
 br\com\rpires\exceptions\TableException.class
 br\com\rpires\dao\IClienteDAO.class
 br\com\rpires\dao\generic\IGenericDAO.class
