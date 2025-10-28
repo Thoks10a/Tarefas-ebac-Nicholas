@@ -1,0 +1,22 @@
+Consegue calcular o fatorial de um número acima de 100 com uma solução recursiva? Justifique sua resposta.
+
+Sim, porém o custo de memória é maior.
+
+explique as diferenças entre a solução do exercício 2 e a do exercício 3
+
+Recursividade usa mais espaço de memória e dependendo do numero a ser caculado pode ser que ocorra estouro de memória e demore mais tempo para chegar a um resultado.
+Já a programação dimâmica ela divide e armaze as informação fazendo com que o cáculo fique mais rapido e chegue a um resultado mais facilmente.
+
+calcule a complexidade de tempo das soluções da série de Fibonacci apresentadas no módulo e compare as duas.
+
+| Implementação | Tempo | Espaço | Vantagens | Desvantagens |
+|---------------|-------|--------|-----------|--------------|
+| Recursivo Simples | O(2^n) | O(n) | Simples | Extremamente lento |
+| Top-Down | O(n) | O(2n) | Intuitivo | Usa pilha de chamadas |
+| Bottom-Up | O(n) | O(n) | Sem recursão | Calcula todos os valores |
+| Bottom-Up Otimizado | O(n) | O(1) | Mais eficiente | Calcula todos os valores |
+
+
+Por que a solução feita com programação dinâmica é melhor?
+
+Uma maneira de evitar recursão ao mesmo tempo que economiza memória do computador evitando estouro de memória.
