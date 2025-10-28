@@ -1,0 +1,21 @@
+Pilha - push - Tempo: O(n²) - Loop aninhado que percorre o array duas vezes / Espaço: O(1) - Não usa espaço adicional além do array existente
+pop - Tempo: O(n) - Loop simples + método reajuste O(n) / Espaço: O(1) - Não usa espaço adicional
+
+
+Fila - enqueue - Tempo: O(n) - Pior caso percorre todo o array / Espaço: O(1) - Não usa espaço adicional
+dequeue - Tempo: O(n) - Pior caso percorre todo o array / Espaço: O(1) - Não usa espaço adicional
+front - Tempo: O(1) - Acesso direto ao índice / Espaço: O(1) - Não usa espaço adicional
+rear - Tempo: O(1) - Acesso direto ao índice / Espaço: O(1) - Não usa espaço adicional
+
+
+Lista - add - Tempo: O(1) - Inserção no final com ponteiro tail / Espaço: O(1) - Apenas um novo nó
+pop - Tempo: O(1) - Remoção do início / Espaço: O(1) - Não usa espaço adicional
+insert - Tempo: O(n) - Pior caso precisa percorrer até o índice / Espaço: O(1) - Apenas um novo nó
+remove - Tempo: O(n) - Pior caso precisa percorrer até o índice / Espaço: O(1) - Não usa espaço adicional
+elementAt - Tempo: O(n) - Pior caso percorre até o índice / Espaço: O(1) - Não usa espaço adicional
+
+
+
+
+
+
