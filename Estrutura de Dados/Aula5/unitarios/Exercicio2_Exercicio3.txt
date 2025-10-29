@@ -1,0 +1,28 @@
+    @Test
+    public void testFibonacci() throws Exception {
+        ProgramacaoDinamica programacaoDinamica = new ProgramacaoDinamica();
+        int simpleValue = 6;
+        Assert.assertEquals(8, programacaoDinamica.fibonacci2(simpleValue));
+    }
+
+    @Test
+    public void testFibonacci2() throws Exception {
+        ProgramacaoDinamica programacaoDinamica = new ProgramacaoDinamica();
+        int simpleValue = 10;
+        Assert.assertEquals(55, programacaoDinamica.fibonacci2(simpleValue));
+    }
+
+    @Test
+    public void testFibonacci3() throws Exception {
+        ProgramacaoDinamica programacaoDinamica = new ProgramacaoDinamica();
+        int simpleValue = 20;
+        Assert.assertEquals(6765, programacaoDinamica.fibonacci2(simpleValue));
+    }
+
+
+Você conseguiria entender o código que escreveu sem documentá-lo?
+
+Um projeto simples, seria de fácil entendimento logo não teria muito problema sem documentação, mas se fosse um projeto de grande escala com muitos
+métodos e classes, sem documentação seria extremamente complicado de entender, o que levaria horas para entender o que ocorre em uma classe ou
+método especifico.
+
