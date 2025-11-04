@@ -35,4 +35,8 @@ public class ServiceMeme {
     public List<CategoriaMemeDTO> listaTodasCategorias() {
         return categoriaMemeClient.buscaCategorias();
     }
+
+    public String testePrint2() {
+        return categoriaMemeClient.testePrint2();
+    }
 }

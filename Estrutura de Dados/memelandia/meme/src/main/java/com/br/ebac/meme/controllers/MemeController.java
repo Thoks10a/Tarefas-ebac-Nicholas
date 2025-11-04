@@ -34,6 +34,10 @@ public class MemeController {
     public String testePrint() {
         return categoriaMemeClient.testePrint();
     }
+    @GetMapping("/teste-print2")
+    public String testePrint2() {
+        return "teste print 2";
+    }
 
     @PostMapping("")
     public Meme novoMeme(@RequestBody Meme meme) {

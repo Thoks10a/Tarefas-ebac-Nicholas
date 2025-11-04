@@ -3,13 +3,12 @@ package com.br.ebac.categoriameme.services;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import com.br.ebac.categoriameme.entities.CategoriaMeme;
 import com.br.ebac.categoriameme.repositories.RepositorioCategoriaMeme;
 
-@Component
+@Service
 public class ServiceCategoriaMeme {
 
     @Autowired
