@@ -23,9 +23,15 @@ public class CategoriaMemeController {
         this.serviceCategoriaMeme = serviceCategoriaMeme;
     }
 
-    @GetMapping("/todos-memes")
+    @GetMapping("/todos-categoriamemes")
     public List<CategoriaMeme> buscaCategorias() {
         return serviceCategoriaMeme.listaTodasCategorias();
+    }
+
+    @GetMapping("/teste-print")
+    public String testePrint() {
+        
+        return serviceCategoriaMeme.TestePrint();
     }
 
 

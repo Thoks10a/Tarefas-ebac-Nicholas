@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import com.br.ebac.categoriameme.entities.CategoriaMeme;
 import com.br.ebac.categoriameme.repositories.RepositorioCategoriaMeme;
@@ -20,5 +21,9 @@ public class ServiceCategoriaMeme {
 
     public List<CategoriaMeme> listaTodasCategorias() {
         return repositorioCategoriaMeme.findAll();
+    }
+
+    public String TestePrint() {
+        return "Teste de print";
     }
 }
