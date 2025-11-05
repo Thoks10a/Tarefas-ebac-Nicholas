@@ -2,7 +2,6 @@ package com.br.ebac.categoriameme.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +15,6 @@ import com.br.ebac.categoriameme.services.ServiceCategoriaMeme;
 @RequestMapping("/categoriameme")
 public class CategoriaMemeController {
 
-    @Autowired
     private ServiceCategoriaMeme serviceCategoriaMeme;
 
     public CategoriaMemeController(ServiceCategoriaMeme serviceCategoriaMeme) {
@@ -28,10 +26,10 @@ public class CategoriaMemeController {
         return serviceCategoriaMeme.listaTodasCategorias();
     }
 
-    @GetMapping("/teste-print")
-    public String testePrint() {
+    @GetMapping("/conexao-categoriameme")
+    public String ConexãoCategoriaMeme() {
         
-        return serviceCategoriaMeme.TestePrint();
+        return serviceCategoriaMeme.ConexãoCategoriaMeme();
     }
 
 

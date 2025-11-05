@@ -2,27 +2,28 @@ package com.br.ebac.meme.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.br.ebac.meme.clients.CategoriaMemeClient;
+import com.br.ebac.meme.clients.UsuarioClient;
 import com.br.ebac.meme.entities.Meme;
 import com.br.ebac.meme.services.ServiceMeme;
-import com.br.ebac.meme.clients.CategoriaMemeClient;
 
 @RestController
 @RequestMapping("/meme")
 public class MemeController {
 
-    @Autowired
     private ServiceMeme serviceMeme;
-    @Autowired
     private CategoriaMemeClient categoriaMemeClient;
-    public MemeController(ServiceMeme serviceMeme) {
+    private UsuarioClient usuarioClient;
+    public MemeController(ServiceMeme serviceMeme, CategoriaMemeClient categoriaMemeClient, UsuarioClient usuarioClient) {
         this.serviceMeme = serviceMeme;
+        this.categoriaMemeClient = categoriaMemeClient;
+        this.usuarioClient = usuarioClient;
     }
 
     @GetMapping("/todos-memes")
@@ -30,13 +31,14 @@ public class MemeController {
         return serviceMeme.listaTodosMemes();
     }
 
-    @GetMapping("/teste-print")
-    public String testePrint() {
-        return categoriaMemeClient.testePrint();
+    @GetMapping("/conexao-categoriameme")
+    public String ConexaoCategoriaMeme() {
+        return categoriaMemeClient.ConexaoCategoriaMeme();
     }
-    @GetMapping("/teste-print2")
-    public String testePrint2() {
-        return "teste print 2";
+
+    @GetMapping("/conexao-usuario")
+    public String ConexaoUsuario() {
+        return usuarioClient.ConexaoUsuario();
     }
 
     @PostMapping("")

@@ -2,7 +2,6 @@ package com.br.ebac.usuario.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,13 +12,17 @@ import com.br.ebac.usuario.entities.Usuario;
 import com.br.ebac.usuario.services.ServiceUsuario;
 
 @RestController
-@RequestMapping("/memelandia/usuario")
+@RequestMapping("/usuario")
 public class ControllerUsuario {
 
-    @Autowired
     private ServiceUsuario serviceUsuario;
     public ControllerUsuario(ServiceUsuario serviceUsuario) {
         this.serviceUsuario = serviceUsuario;
+    }
+
+    @GetMapping("/conexao-usuario")
+    public String ConexaoUsuario() {
+        return serviceUsuario.ConexaoUsuario();
     }
 
     @GetMapping("/usuarios")
@@ -27,7 +30,7 @@ public class ControllerUsuario {
         return serviceUsuario.listaTodosUsuarios();
     }
 
-    @PostMapping("/usuarios")
+    @PostMapping("/usuarios/novo-usuario")
     public Usuario novoUsuario(@RequestBody Usuario usuario) {
         return serviceUsuario.novoUsuario(usuario);
     }

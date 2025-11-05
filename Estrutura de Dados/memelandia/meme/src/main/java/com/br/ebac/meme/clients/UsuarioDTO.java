@@ -1,15 +1,11 @@
-package com.br.ebac.usuario.entities;
-
+package com.br.ebac.meme.clients;
 
 import java.sql.Date;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
+public class UsuarioDTO {
 
-
-@Entity
-public class Usuario {
     @Id
     private Long id;
 
@@ -19,7 +15,14 @@ public class Usuario {
 
     private Date dataCadastro;
 
-    public Usuario() {}
+    public UsuarioDTO() {}
+
+    public UsuarioDTO(Long id, String nome, String email, Date dataCadastro) {
+        this.id = id;
+        this.nome = nome;
+        this.email = email;
+        this.dataCadastro = dataCadastro;
+    }
 
     public Long getId() {
         return id;
@@ -53,4 +56,3 @@ public class Usuario {
         this.dataCadastro = dataCadastro;
     }
 }
-
