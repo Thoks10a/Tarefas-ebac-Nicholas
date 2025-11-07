@@ -4,12 +4,15 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.br.ebac.meme.clients.CategoriaMemeClient;
+import com.br.ebac.meme.clients.CategoriaMemeDTO;
 import com.br.ebac.meme.clients.UsuarioClient;
+import com.br.ebac.meme.clients.UsuarioDTO;
 import com.br.ebac.meme.entities.Meme;
 import com.br.ebac.meme.services.ServiceMeme;
 
@@ -26,23 +29,61 @@ public class MemeController {
         this.usuarioClient = usuarioClient;
     }
 
+    //Meme
     @GetMapping("/todos-memes")
     public List<Meme> buscaMemes() {
         return serviceMeme.listaTodosMemes();
     }
 
+    @GetMapping("/id/{id}")
+    public Meme buscaMemePorId(@PathVariable Long id) {
+        return serviceMeme.buscaMemePorId(id);
+    }
+
+    @PostMapping("/cadastrar-meme")
+    public Meme novoMeme(@RequestBody Meme meme) {
+        return serviceMeme.novoMeme(meme);
+    }
+
+    //CategoriaMeme
     @GetMapping("/conexao-categoriameme")
     public String ConexaoCategoriaMeme() {
         return categoriaMemeClient.ConexaoCategoriaMeme();
     }
 
+    @GetMapping("/todos-categoriamemes")
+    public List<CategoriaMemeDTO> buscaCategorias() {
+        return categoriaMemeClient.buscaCategorias();
+    }
+
+    @GetMapping("/id-categoria/{id}")
+    public CategoriaMemeDTO buscaCategoriaPorId(@PathVariable Long id) {
+        return categoriaMemeClient.buscaCategoriaPorId(id);
+    }
+
+    @PostMapping("/cadastrar-categoria")
+    public CategoriaMemeDTO novaCategoria(@RequestBody CategoriaMemeDTO categoriaMemeDTO) {
+        return categoriaMemeClient.novaCategoria(categoriaMemeDTO);
+    }
+
+    //Usuario
     @GetMapping("/conexao-usuario")
     public String ConexaoUsuario() {
         return usuarioClient.ConexaoUsuario();
     }
 
-    @PostMapping("")
-    public Meme novoMeme(@RequestBody Meme meme) {
-        return serviceMeme.novoMeme(meme);
+    @GetMapping("/usuarios")
+    public List<UsuarioDTO> buscaUsuarios() {
+        return usuarioClient.buscaUsuarios();
+    }    
+
+    @GetMapping("/id-usuario/{id}")
+    public UsuarioDTO buscaUsuarioPorId(@PathVariable Long id) {
+        return usuarioClient.buscaUsuarioPorId(id);
+    }
+
+    @PostMapping("/cadastrar-usuario")
+    public UsuarioDTO novoUsuario(@RequestBody UsuarioDTO usuarioDTO) {
+        return usuarioClient.novoUsuario(usuarioDTO);
     }
 }

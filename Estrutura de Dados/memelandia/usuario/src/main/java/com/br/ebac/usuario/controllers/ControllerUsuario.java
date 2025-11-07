@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.br.ebac.usuario.entities.Usuario;
@@ -25,12 +26,18 @@ public class ControllerUsuario {
         return serviceUsuario.ConexaoUsuario();
     }
 
+
     @GetMapping("/usuarios")
     public List<Usuario> buscaUsuarios() {
         return serviceUsuario.listaTodosUsuarios();
     }
 
-    @PostMapping("/usuarios/novo-usuario")
+    @GetMapping("/id-usuario/{id}")
+    public Usuario buscaUsuarioPorId(@PathVariable Long id) {
+        return serviceUsuario.buscaUsuarioPorId(id);
+    }
+
+    @PostMapping("/cadastrar-usuario")
     public Usuario novoUsuario(@RequestBody Usuario usuario) {
         return serviceUsuario.novoUsuario(usuario);
     }

@@ -44,6 +44,14 @@ public class CategoriaMemeDTO {
   public void setDescricao(String descricao) {
       this.descricao = descricao;
   }
+
+  public Date getDataCadastro() {
+      return dataCadastro;
+  }
+
+  public void setDataCadastro(Date dataCadastro) {
+      this.dataCadastro = dataCadastro;
+  }
   
     @Override
   

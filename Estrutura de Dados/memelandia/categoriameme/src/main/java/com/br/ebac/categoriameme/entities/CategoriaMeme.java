@@ -20,6 +20,13 @@ public class CategoriaMeme {
 
     public CategoriaMeme() {}
 
+    public CategoriaMeme(Long id, String nome, String descricao, Date dataCadastro) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dataCadastro = dataCadastro;
+    }
+
     public Long getId() {
         return id;
     }
@@ -44,5 +51,12 @@ public class CategoriaMeme {
         this.descricao = descricao;
     }
 
+    public Date getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public void setDataCadastro(Date dataCadastro) {
+        this.dataCadastro = dataCadastro;
+    }
     
 }

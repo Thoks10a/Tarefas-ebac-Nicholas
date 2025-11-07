@@ -1,13 +1,12 @@
 package com.br.ebac.meme.services;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import com.br.ebac.meme.clients.CategoriaMemeClient;
-import com.br.ebac.meme.clients.CategoriaMemeDTO;
 import com.br.ebac.meme.clients.UsuarioClient;
-import com.br.ebac.meme.clients.UsuarioDTO;
 import com.br.ebac.meme.entities.Meme;
 import com.br.ebac.meme.repositories.RepositorioMeme;
 
@@ -17,6 +16,7 @@ public class ServiceMeme {
     private final CategoriaMemeClient categoriaMemeClient;
     private RepositorioMeme repositorioMeme;
     private UsuarioClient usuarioClient;
+    ArrayList<Object> memeLogs = new ArrayList<>();
     public ServiceMeme(CategoriaMemeClient categoriaMemeClient, RepositorioMeme repositorioMeme, UsuarioClient usuarioClient) {
         this.categoriaMemeClient = categoriaMemeClient;
         this.repositorioMeme = repositorioMeme;
@@ -33,12 +33,21 @@ public class ServiceMeme {
         return repositorioMeme.findAll();
     }
 
-    public List<CategoriaMemeDTO> listaTodasCategorias() {
-        return categoriaMemeClient.buscaCategorias();
+    public Meme buscaMemePorId(Long id){
+        memeLog(repositorioMeme.findById(id).get(), printMemeLogs());
+        return repositorioMeme.findById(id).get();
     }
 
-    public List<UsuarioDTO> listaTodosUsuarios() {
-        return usuarioClient.buscaUsuarios();
+    public ArrayList<Object> memeLog(Meme meme, String printMemeLogs){
+        if(meme.getId() != null){
+            memeLogs.add(printMemeLogs);
+            memeLogs.add(meme);
+        }
+        return memeLogs;
+    }
+
+    public String printMemeLogs(){
+        return "Log de Meme";
     }
 
 }

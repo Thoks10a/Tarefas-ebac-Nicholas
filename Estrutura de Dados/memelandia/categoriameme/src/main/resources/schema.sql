@@ -40,5 +40,5 @@ ALTER TABLE meme ADD CONSTRAINT FK_MEME_ON_USUARIO FOREIGN KEY (usuario_id) REFE
 INSERT INTO usuario (id, nome, email, data_cadastro) VALUES (1, 'João da Silva', 'joao.silva@example.com', '2021-01-01');
 INSERT INTO categoria_meme (id, nome, descricao, data_cadastro, usuario_id) VALUES (1, 'Categoria 1', 'Descrição da Categoria 1', '2021-01-01', 1);
 INSERT INTO meme (id, nome, descricao, data_cadastro, categoria_meme_id, usuario_id) VALUES (1, 'Meme 1', 'Descrição do Meme 1', '2021-01-01', 1, 1);
-INSERT INTO meme (id, nome, descricao, data_cadastro, categoria_meme_id, usuario_id) VALUES (2, 'Meme 2', 'Descrição do Meme 2', '2021-01-02', 1, 1);
-INSERT INTO meme (id, nome, descricao, data_cadastro, categoria_meme_id, usuario_id) VALUES (3, 'Meme 3', 'Descrição do Meme 3', '2021-01-03', 1, 1);
+INSERT INTO categoria_meme (id, nome, descricao, data_cadastro, usuario_id) VALUES (2, 'Categoria 2', 'Descrição da Categoria 2', '2021-01-02', 1);
+INSERT INTO categoria_meme (id, nome, descricao, data_cadastro, usuario_id) VALUES (3, 'Categoria 3', 'Descrição da Categoria 3', '2021-01-03', 1);

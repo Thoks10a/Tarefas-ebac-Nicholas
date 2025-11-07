@@ -17,6 +17,15 @@ public class Meme {
 
     private Date dataCadastro;
 
+    public Meme() {}
+
+    public Meme(Long id, String nome, String descricao, Date dataCadastro) {
+        this.id = id;
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dataCadastro = dataCadastro;
+    }
+
     public Long getId() {
         return id;
     }
